@@ -2,10 +2,10 @@ let myImage = document.querySelector('img');
 
 myImage.onclick = function (){
     let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'goog.png'){
-        myImage.setAttribute('src','goog.png');
+    if(mySrc === 'images/goog.png'){
+        myImage.setAttribute('src','images/chr.png');
     } else {
-        myImage.setAttribute('src','chr.png');
+        myImage.setAttribute('src','images/goog.png');
     }
 
 }
@@ -18,14 +18,14 @@ function setUserName(){
         setUserName();
     }else{
         localStorage.setItem('name', myName);
-        myHeading.innerHTML = 'Vibirai , ' + myName;
+        myHeading.innerHTML = 'Vibirai ,' + myName;
     }
 }
 if(!localStorage.getItem('name')){
     setUserName();
 }else {
     let storedName = localStorage.getItem('name');
-    myHeading.innerHTML = 'Vibirai , ' + storedName;
+    myHeading.innerHTML = 'Vibirai ,' + storedName;
 }
 myButton.onclick = function (){
     setUserName();
